@@ -46,7 +46,7 @@ header{
 section{
     padding: var(--padding);
 }
-a{
+a,.list__item{
     color:var(--yukongold);
     text-decoration: none;
 }
@@ -75,6 +75,10 @@ ul.list > li.item {
     cursor: pointer;
 }
 
+ul.list > li.list__item:last-child {
+    border-bottom: none;
+}
+
 li.item:hover a{
 color:var(--black);
 }
@@ -83,6 +87,41 @@ color:var(--black);
     max-width: var(--max-width);
     margin:0 auto;
     padding: 0 --padding;
+}
+
+/* Formulario */
+.search{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.search__form{
+ 
+ border: solid 1px; 
+ border-radius: var(--border-radius);
+ margin-bottom: var(--margin);
+ padding: var(--padding);
+ /* Grid */
+ display: inline-grid;
+ justify-content: end;
+ grid-template-columns: auto 40px;
+ grid-template-rows: auto;
+ gap: 4px;
+}
+
+.input{
+width: 100%;
+padding: var(--padding);
+outline: none;
+border:solid 1px var(--ripelemon);
+font-size: 1rem;
+color: #040404;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    gap: 10px;
 }
 
 .card{
@@ -121,6 +160,11 @@ color:var(--black);
     justify-content: space-between;
     transition: var(--transition);
 }
+.button--icon{
+    justify-content: center;
+    align-items: center;
+    
+}
 
 .button__text{}
 .button__icon{
@@ -158,4 +202,8 @@ color:var(--black);
 .list__item:hover{
     background: var(--butteredrum);
     color: var();
+}
+
+div.card > ul.list>li.list__item a:visited{
+color:#ffffff
 }
